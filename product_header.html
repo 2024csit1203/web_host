@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axpect Pharma</title>
+  <style>
+
+    header {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-container {
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .company-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      opacity: 0;
+      animation: fadeSlideUp 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="product-container">
+      <img src="img/product-page/header.jpg" alt="Product Header"/>
+      <h1 class="company-title">Axpect Pharma</h1>
+    </div>
+  </header>
+</body>
+</html>

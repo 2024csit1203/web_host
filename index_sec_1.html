@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axpect Pharma</title>
+  <style>
+    .container-sec-2{
+   background-color: #f8f9fb;
+   padding-top: 30px;
+}
+
+.sec-2-heading-content{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 10%;
+  
+  /*flex-wrap: wrap;*/
+}
+
+.section-2 > div {
+  flex: 1 1 50%;
+}
+
+.section-2 img {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Style */
+.section-2 p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sec-2-text-style {
+  font-weight: 600;
+  color: #005bac;
+}
+
+ .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-2 {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .section-2 > div {
+    flex: 1 1 100%;
+  }
+
+  .section-2 p {
+    font-size: 16px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container-sec-2">
+    <div class="sec-2-heading-content">
+      <h1 class="sec-2-heading">Welcome to Axpect Pharma</h1>
+      <p class="sec-2-text">Best PCD Pharma Franchise Company in India</p>
+    </div>
+
+    <section class="section-2">
+      <div>
+        <img src="img/section-2-img.jpg" alt="" />
+      </div>
+      <div>
+        <p>
+          <span class="sec-2-text-style">Axpect Pharma</span> is a leading
+          <span class="sec-2-text-style">PCD Pharma Franchise Company in India,</span>
+          committed to delivering superior healthcare solutions with exceptional
+          marketing and distribution support. As a trusted name in the
+          pharmaceutical industry, we offer exclusive monopoly rights, enabling
+          our franchise partners to grow efficiently in their local territories
+          under the
+          <span class="sec-2-text-style">Propaganda-Cum-Distribution (PCD)</span>
+          model.
+        </p>
+        <p>
+          At Axpect Pharma, we specialize in manufacturing and supplying a
+          high-quality range of pharmaceutical products including
+          <span class="sec-2-text-style">Tablets, Capsules, Oral Liquids, Dry Syrups, and Effervescent
+            formulations</span>
+          at competitive prices. Our company is recognized for its ethical
+          business practices, timely delivery, and complete product support.
+        </p>
+        <p>
+          We are on a mission to
+          <span class="sec-2-text-style">expand access to affordable, effective, and reliable
+            medications,</span>
+          supporting healthier lives through science-backed formulations and
+          strategic franchise partnerships.
+        </p>
+
+        <button class="btn" role="button">Read More</button>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

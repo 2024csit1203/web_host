@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <div id="">
+    <div class="nav-container">
+    <div class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Axpect Pharma" />
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">☰</div>
+
+      <div class="nav-content" id="navbar">
+        <div class="navbar">
+          <div><a href="index.html" class="nav-link">Home</a></div>
+          <div><a href="Our_Company.html" class="nav-link">Our Company</a></div>
+          <div><a href="product.html" class="nav-link">Products</a></div>
+          <div><a href="services.html" class="nav-link">Services</a></div>
+          <div><a href="gallery.html" class="nav-link">Gallery</a></div>
+          <div><a href="contact.html" class="nav-link">Contact Us</a></div>
+          <div class="sendEnquiry mobile-btn">
+            <button class="contact-btn btn open-contact">Contact Us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sendEnquiry desktop-btn">
+        <button class="contact-btn btn open-contact">Contact Us</button>
+      </div>
+    </div>
+  </div>
+    <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <div class="form-container">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="data[Name]" required>
+
+          <label for="number">Mob No:</label>
+          <input type="number" id="number" name="data[Mob No]" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="data[Email Id]" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="data[Message]" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="form-message"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="Product_Header"></div>
+
+
+
+<h2>Product List</h2>
+
+  <!-- Search Box -->
+  <input type="text" id="search-box" placeholder="Search products by brand name...">
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Brand Name</th>
+        <th>COMPOSITION</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody id="data-output"></tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination" id="pagination"></div>
+
+
+  <div id="Footer"></div>
+
+<script src="navbar.js"></script>
+
+
+<script>
+  fetch('product_header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Product_Header").innerHTML = data;
+    });
+
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Footer").innerHTML = data;
+    });
+</script>
+
+
+<script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
+
+  <!-- JS of  Product Section -->
+
+    <script>
+    // State
+    let mainData = [];
+    let filteredMain = [];
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    // Fetch Products (main.json should be in same folder)
+    fetch("main.json")
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to load main.json: " + res.status);
+        return res.json();
+      })
+      .then(products => {
+        mainData = Array.isArray(products) ? products : [];
+        filteredMain = mainData.slice();
+        render();
+      })
+      .catch(err => {
+        console.error(err);
+        document.querySelector("#data-output").innerHTML = `<tr><td colspan="3" class="no-results">Failed to load products. Check console for details.</td></tr>`;
+      });
+
+    // Render (table + pagination)
+    function render() {
+      renderTable();
+      renderPagination();
+    }
+
+    function renderTable() {
+      const placeholder = document.querySelector("#data-output");
+      if (!filteredMain.length) {
+        placeholder.innerHTML = `<tr><td colspan="3" class="no-results">No products found</td></tr>`;
+        return;
+      }
+
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const productsToShow = filteredMain.slice(start, end);
+
+      let out = "";
+      for (const item of productsToShow) {
+        // fallback image if missing
+        const img = item.image ? item.image : "https://via.placeholder.com/160x100?text=No+Image";
+        const name = escapeHtml(item.name || "");
+        const content = escapeHtml(item.content || "");
+        out += `
+          <tr>
+            <td style="text-align:center">${name}</td>
+            <td>${content}</td>
+            <td style="text-align:center"><img src="${img}" alt="${name}" loading="lazy"></td>
+          </tr>
+        `;
+      }
+      placeholder.innerHTML = out;
+      // scroll table into view for better UX after page change
+      document.querySelector("table").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function renderPagination() {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+      const totalPages = Math.ceil(filteredMain.length / itemsPerPage);
+      if (totalPages <= 1) return;
+
+      // prev
+      const prev = makePageBtn("Prev", Math.max(1, currentPage - 1));
+      pagination.appendChild(prev);
+
+      // page window (show up to 7 pages)
+      const maxButtons = 7;
+      let start = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+      let end = Math.min(totalPages, start + maxButtons - 1);
+      if (end - start < maxButtons - 1) start = Math.max(1, end - maxButtons + 1);
+
+      for (let p = start; p <= end; p++) {
+        const btn = makePageBtn(p, p);
+        if (p === currentPage) btn.classList.add("active");
+        pagination.appendChild(btn);
+      }
+
+      // next
+      const next = makePageBtn("Next", Math.min(totalPages, currentPage + 1));
+      pagination.appendChild(next);
+    }
+
+    function makePageBtn(label, page) {
+      const btn = document.createElement("button");
+      btn.textContent = label;
+      btn.addEventListener("click", () => {
+        currentPage = page;
+        render();
+      });
+      return btn;
+    }
+
+    // Search
+    const searchBox = document.getElementById("search-box");
+    let searchTimer = null;
+    searchBox.addEventListener("input", (e) => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        const q = e.target.value.trim().toLowerCase();
+        if (!q) {
+          filteredMain = mainData.slice();
+        } else {
+          filteredMain = mainData.filter(item =>
+            (item.name || "").toLowerCase().includes(q) ||
+            (item.content || "").toLowerCase().includes(q) ||
+            (item.productCode || "").toLowerCase().includes(q)
+          );
+        }
+        currentPage = 1;
+        render();
+      }, 200);
+    });
+
+    // Utility: escape HTML
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+    }
+  </script>
+</body>
+</html>

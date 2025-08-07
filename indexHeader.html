@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <style>
+    .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: url('img/bg-img/header-bg-img.png') no-repeat center center;
+  background-size: cover;
+  color: #003366;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.header-text {
+  max-width: 50%;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.header-text p:first-child {
+  font-size: 32px;
+  font-weight: 600;
+  color: #002244;
+}
+
+.header-text p:last-child {
+  margin-top: 10px;
+  color: #005599;
+}
+
+.header-image img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .header-text {
+    max-width: 100%;
+    font-size: 20px;
+  }
+
+  .header-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="header-container">
+      <div class="header-text">
+        <p>
+          We care for you <br />
+          by providing Qualitative Range of
+        </p>
+        <p>tablets, Capsules, Oral Liquids, Dry Syrup & Effervescent.</p>
+      </div>
+      <div class="header-image">
+        <img src="img/header-right-side-img.png" alt="Pharma illustration" />
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,479 @@
+[
+  {
+    "_comment": "Product No 001",
+    "name": "axlevo cold",
+    "content": "Paracrtamol 500mg+ Levocetrizine Dihydrochloride 2.5mg + Phenylephrine Hydrochloride 10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 002",
+    "name": "axlevo cold N flu",
+    "content": "Aceclofenac 100mg +Paracetamol 325mg+Cetrizine Dihydrochloride 5mg+Phenylephrine H.C.L.+Caffeine 25mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 003",
+    "name": "axlevo",
+    "content": "Dextromethoperin 10mg+Chlorophenaraine Malete 2mg+Phenylephrine Hydrochloride 5mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 004",
+    "name": "axesera SP",
+    "content": "Aceclofenac 100mg +Paracetamol 325mg+ Seratiopeptidase10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 005",
+    "name": "axesera  P",
+    "content": "Aceclofenac 100mg +Paracetamol 325mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 006",
+    "name": "axesera MR",
+    "content": "Aceclofenac 100mg+Paracetamol 325mg+Chlorzoxazone 250mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 007",
+    "name": "axesera TH 4",
+    "content": "Acecofenac 100mg+Thiocolchicoside 4mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 008",
+    "name": "axelive 100mg",
+    "content": "Nimesulide 100mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 009",
+    "name": "axpemol-500mg",
+    "content": "Paracetamol 500mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 010",
+    "name": "axpenide-plus",
+    "content": "Nimesulide 100mg +Paracetamol 325mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 011",
+    "name": "axpemol-650mg",
+    "content": "Paracetamol 650mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 012",
+    "name": "axto-saps",
+    "content": "Mefenamic Acid 250mg +Dicyclomine Hydrochloride 10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 013",
+    "name": "axozine",
+    "content": "Cetrizine Hydrochloride 10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 014",
+    "name": "axo-set 5mg",
+    "content": "Levocetrizine 5mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 015",
+    "name": "axolek-L",
+    "content": "Levocetrizine 5mg +Montelukast 10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 016",
+    "name": "axomax-500mg",
+    "content": "Azithromycine 500 mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 017",
+    "name": "axclave-625mg",
+    "content": "Amoxycillin 500mg +Potassium Clavulanate 125mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 018",
+    "name": "axodox-500mg",
+    "content": "Amoxycillin Trihydrate 500mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 019",
+    "name": "axocef-200mg",
+    "content": "Cefpodoxime Proxetil 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 020",
+    "name": "axocef-O",
+    "content": "Cefpodoxime Proxetil 200mg +Ofloxacin 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 021",
+    "name": "axxime -500mg",
+    "content": "Cefuroxime Axetil 500mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 022",
+    "name": "axofix-100mg",
+    "content": "Cefixime 100mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 023",
+    "name": "axjim-plus",
+    "content": "Cifixime 200mg +Ofloxacin 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 024",
+    "name": "axplox-500",
+    "content": "Ciprofloxacin Hydrochloride 500mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 025",
+    "name": "axomax-200mg",
+    "content": "Ofloxacin 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 026",
+    "name": "axolid-600mg",
+    "content": "Linzolid 600mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 027",
+    "name": "ax-zole 150mg",
+    "content": "Fluconazole 150mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 028",
+    "name": "ax-zole-200mg",
+    "content": "Fluconazole 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 029",
+    "name": "actromed-100mg",
+    "content": "Itraconazole 100mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 030",
+    "name": "actromed-200mg",
+    "content": "Itraconazole 200mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 031",
+    "name": "axoroz-D",
+    "content": "Omeprazole 20mg /Omeprazole 20mg +Domperidon 10mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 032",
+    "name": "ax-dine  150mg",
+    "content": "Ranitidine Hydrochloride 150mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 033",
+    "name": "axi-pan DSR",
+    "content": "Pantraprazole 40mg +Domperidone  30mg S.R",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 034",
+    "name": "Axi-zole DSR",
+    "content": "Rapeprazole 20mg +Domperidone 30mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 035",
+    "name": "axo-flox  OZ",
+    "content": "Ofloxacin 200mg +Ornidazole 500mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 036",
+    "name": "axifer-XT",
+    "content": "Ferrous Ascorbate 100mg + Folic Acid 1.5mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 037",
+    "name": "axivita",
+    "content": "Multivitamin +Multimineral (Softgels)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 038",
+    "name": "AXI-biotic",
+    "content": "Pre & Probiotic",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 039",
+    "name": "axifolac",
+    "content": "Multivitamin + Folic Acid 300mg + Lactic Acid Bacillus",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 040",
+    "name": "axizyme-forte",
+    "content": "Alpha amylase 100mg + Papain 60mg +Activated charcoal 75mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 041",
+    "name": "axmitrol-CT",
+    "content": "Calcitrol +Calcium Carbonate +Zinc (Softgels)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 042",
+    "name": "axical-500",
+    "content": "Calcium 500mg + Vitamin D3 250mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 043",
+    "name": "axicort 6mg",
+    "content": "Deflazacort 6mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 044",
+    "name": "albeax 400mg",
+    "content": "Albendazole 400mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 045",
+    "name": "albeax-plus",
+    "content": "Albendazole 400mg +Ivermectine 6mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 046",
+    "name": "Amoxclav-syrup",
+    "content": "Amoxycillin 200mg + Pottasium Clavenic 28.5mg glas bottle With WFI Amoxicillin Trihydrate IP 400mg + Clavulanic Acid 62.50mg glass bottle with WFI",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 047",
+    "name": "axocef-50mg syrup",
+    "content": "Cefpdoxime 50mg + Clavenic 31.25 glass bottle With WFI",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 048",
+    "name": "axoplex-AZ syrup",
+    "content": "Multivitamin + Minerals +L-Lysine Hydrochloride (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 049",
+    "name": "axizyme  syrup",
+    "content": "Enzyme with Multivitamin (Ayurvedic) (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 050",
+    "name": "ax-plex-L syrup",
+    "content": "B- complex with L- Lysine  (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 051",
+    "name": "lycoax-bust syrup",
+    "content": "Lycopene 100mg +Multivitamin +Minerals (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 052",
+    "name": "axozine-kid",
+    "content": "Cetrizine 5mg  (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 053",
+    "name": "axo-set-kid",
+    "content": "Levocetrizine 2.5mg (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 054",
+    "name": "axesera-kid",
+    "content": "Aceclofenac 50mg +Paracetamol 125mg (Syrup )",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 055",
+    "name": "axi-clo-p",
+    "content": "Chlorpheniramine Meleate 4mg +Dextromethorphan Hydrobromide 10mg  (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 056",
+    "name": "axozine-LC kid",
+    "content": "Leocetrizine 5mg +Montelukast 10mg (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 057",
+    "name": "aximol-cold",
+    "content": "Paracetamol 125mg +Cetrizine 2.5mg +Phenyleperin 2.5mg",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 058",
+    "name": "axotrivin adult",
+    "content": "Xylometazoline Hydrochloride 0.1% (Nasal Spray)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 059",
+    "name": "axicid-MPS",
+    "content": "Symethincon 25mg +Dried Gel 200mg +Magnesium 200mg +Sorbital 70% (Suspension)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 060",
+    "name": "Axiflox-OM",
+    "content": "Ofloxacin 50mg +Metronidazole 125mg (Suspension)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 061",
+    "name": "axipro-max",
+    "content": "Cyproheptadine 2mg +Tricoline citrate 275mg (Syrup)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 062",
+    "name": "albeax-kid",
+    "content": "Albendazole 200mg/ Albendazole 200mg+Ivermectine 300mg (Suspension)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 063",
+    "name": "axo-protine",
+    "content": "Vitamins & Minerals (Protein Powder)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 064",
+    "name": "axipanta-40",
+    "content": "Pantraprazole 40mg (Injection)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 065",
+    "name": "axofenac (inj)",
+    "content": "Diclofenac injection 3ml",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 066",
+    "name": "aplox-D",
+    "content": "Ciprofloxacin /Ciprofloxacin +Beclomethason (Eye/Ear DROP)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 067",
+    "name": "axoflox",
+    "content": "Ofloxacin /Ofloxacin +Beclomethason (Eye/Ear Drop)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 068",
+    "name": "axifloxacin",
+    "content": "Moxifloxacin 0.5% (eye/ear drop)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 069",
+    "name": "axo-cleen",
+    "content": "Clotrimazole 1% +Lignocine Hyd 2% +Glycerine 30% +Propa aline Glycol (Ear DROP )",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 070",
+    "name": "axiton soap",
+    "content": "Ketoconazole 1% / Ketoconazole 2% (soap)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 071",
+    "name": "axi-liford",
+    "content": "Luliconazole (Soap)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 072",
+    "name": "axolite",
+    "content": "Silver Sulfa 1%+Chlorthexidine Gluconate + Aloe Vera 15%+Allantoin (Ointment )",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 073",
+    "name": "axoderm plus",
+    "content": "Itraconazole +Ofloxacin+Ornidazole +Clobetasol (Ointment)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 074",
+    "name": "axodine plus",
+    "content": "Providone Iodine /Providone Iodine +Metronidazole +Aloe Vera (Ointment)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 075",
+    "name": "axiangel",
+    "content": "Diclofenac Diethylamine 5% +Linseed Oil + Benzyl alcohol",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 076",
+    "name": "Ayurrelax",
+    "content": "Ayurvedic Oil",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 077",
+    "name": "axibigard",
+    "content": "Permetherin",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 078",
+    "name": "axodust",
+    "content": "Clotrimazole 1% (Dusting Powder)",
+    "image": "img/product/img1.jpg"
+  },
+  {
+    "_comment": "Product No 079",
+    "name": "axofix-200mg",
+    "content": "Cefixime 200mg",
+    "image": "img/product/img1.jpg"
+  }
+
+  
+ 
+]

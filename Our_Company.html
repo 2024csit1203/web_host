@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Company</title>
+</head>
+<body>
+  <div id="content"></div>
+  <div id="header"></div>
+  <div id="Section_1"></div>
+  <div id="Index_Choose_Us"></div>
+  <div id="Footer"></div>
+  <script>
+    fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("content").innerHTML = data;
+    });
+
+    fetch('our_company_header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+
+    fetch('our_company_sec_1.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Section_1").innerHTML = data;
+    });
+
+     fetch('index_choose_us.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_Choose_Us").innerHTML = data;
+    });
+
+     fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Footer").innerHTML = data;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar container */
+    .nav-container {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 100%;
+      width: 160px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #004080;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .mobile-btn {
+      display: none;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-content {
+        display: none;
+        width: 100%;
+      }
+      .nav-content.show {
+        display: block;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .mobile-btn {
+        text-align: center;
+        margin-top: 10px;
+        display: block;
+      }
+      .desktop-btn {
+        display: none;
+      }
+      .nav {
+        align-items: flex-start;
+      }
+    }
+
+    /* Contact button */
+    .contact-btn {
+      padding: 14px 28px;
+      background: #007bff;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contact-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Popup overlay */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    /* Popup content */
+    .popup-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+    .close-btn:hover {
+      color: #000;
+    }
+
+    /* Form styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button[type="submit"] {
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background: #0056b3;
+    }
+
+    /* Feedback messages */
+    .success {
+      color: green;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-container">
+    <div class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Axpect Pharma" />
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">☰</div>
+
+      <div class="nav-content" id="navbar">
+        <div class="navbar">
+          <div><a href="index.html" class="nav-link">Home</a></div>
+          <div><a href="Our_Company.html" class="nav-link">Our Company</a></div>
+          <div><a href="product.html" class="nav-link">Products</a></div>
+          <div><a href="services.html" class="nav-link">Services</a></div>
+          <div><a href="gallery.html" class="nav-link">Gallery</a></div>
+          <div><a href="contact.html" class="nav-link">Contact Us</a></div>
+          <div class="sendEnquiry mobile-btn">
+            <button class="contact-btn btn open-contact">Contact Us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sendEnquiry desktop-btn">
+        <button class="contact-btn btn open-contact">Contact Us</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <div class="form-container">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="data[Name]" required>
+
+          <label for="number">Mob No:</label>
+          <input type="number" id="number" name="data[Mob No]" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="data[Email Id]" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="data[Message]" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="form-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("show");
+    }
+
+    // Handle multiple contact buttons
+    document.querySelectorAll(".open-contact").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("popup").style.display = "flex";
+      });
+    });
+
+    // Close popup
+    document.getElementById("closePopup").addEventListener("click", () => {
+      document.getElementById("popup").style.display = "none";
+    });
+
+    // Close when clicking outside
+    window.addEventListener("click", (e) => {
+      if (e.target === document.getElementById("popup")) {
+        document.getElementById("popup").style.display = "none";
+      }
+    });
+
+    // Form submission
+    const form = document.getElementById("contactForm");
+    const messageDiv = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch("https://sheetdb.io/api/v1/m1ldwodvsks7s", {
+        method: "POST",
+        body: formData,
+      })
+      .then((response) => {
+        if (response.ok) {
+          messageDiv.textContent = "Form submitted successfully!";
+          messageDiv.className = "success";
+          form.reset();
+          setTimeout(() => {
+            document.getElementById("popup").style.display = "none";
+          }, 1000);
+        } else {
+          throw new Error("Submission failed");
+        }
+      })
+      .catch(() => {
+        messageDiv.textContent = "Something went wrong. Please try again.";
+        messageDiv.className = "error";
+      });
+    });
+  </script>
+</body>
+</html>

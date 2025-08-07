@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Axpect Pharma — Services</title>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#0046a0;
+      --accent:#0077d6;
+      --accent-2:#00a651;
+      --muted:#666;
+      --bg:#f7f9fc;
+      --card-bg:#ffffff;
+      --container:1200px;
+      --radius:12px;
+      --ease:cubic-bezier(.2,.9,.2,1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+      color:#1f2937;
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    .page {
+      max-width:var(--container);
+      margin:32px auto;
+      padding:0 20px;
+    }
+
+    /* ========== HERO ========== */
+    .hero{
+      display:flex;
+      gap:36px;
+      align-items:center;
+      justify-content:space-between;
+      padding:56px;
+      background:linear-gradient(180deg,#ffffff,#f7fbff);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(6,24,58,0.06);
+      overflow:hidden;
+      margin-bottom:28px;
+    }
+    .hero-left{flex:1;min-width:280px;animation:slideInLeft .9s var(--ease) both}
+    .eyebrow{color:#058240;font-weight:700;letter-spacing:0.6px;margin-bottom:10px}
+    .hero-left h1{color:var(--brand);font-size:30px;margin-bottom:14px;line-height:1.15}
+    .lead{color:#4b5563;margin-bottom:20px;max-width:58ch}
+
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn, .cta-btn {
+      cursor:pointer;
+      border-radius:10px;
+      padding:10px 18px;
+      font-weight:600;
+      border:0;
+      transition:transform .18s ease,box-shadow .18s ease,background .18s;
+    }
+    .cta-btn{background:var(--accent-2);color:#fff}
+    .cta-btn:hover{transform:translateY(-3px);background:#009141}
+    .btn-outline{
+      background:transparent;border:2px solid var(--brand);color:var(--brand);padding:10px 16px;border-radius:10px;
+    }
+    .btn-outline:hover{background:var(--brand);color:#fff;transform:translateY(-3px)}
+
+    .hero-right{flex:1;display:flex;justify-content:center;align-items:center;animation:slideInRight .9s var(--ease) both}
+    .hero-right img{max-width:100%;height:auto;border-radius:10px;box-shadow:0 12px 30px rgba(3,102,214,0.06)}
+
+    /* ========== ABOUT SECTION ========== */
+    .about {
+      display:flex;
+      gap:36px;
+      align-items:center;
+      justify-content:center;
+      background:var(--card-bg);
+      padding:40px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 26px rgba(6,24,58,0.05);
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+    .about img{max-width:300px;border-radius:10px;transform:scale(.98);transition:transform .4s ease}
+    .about img:hover{transform:scale(1)}
+    .about .content{max-width:640px}
+    .about h2{color:var(--brand);font-size:26px;margin-bottom:10px}
+    .muted{color:var(--muted)}
+
+    /* ========== FRANCHISE + SUPPLY (combined-section) ========== */
+    .combined-section{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(6,24,58,0.06);
+      margin-bottom:24px;
+      overflow:hidden;
+    }
+    .combined-inner{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      padding:32px;
+      align-items:start;
+    }
+    .left h2{font-size:22px;color:var(--brand);margin-bottom:10px}
+    .accordion .item{background:#f7fbff;border:1px solid rgba(0,70,160,.06);border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .acc-btn{
+      display:flex;justify-content:space-between;align-items:center;padding:12px 14px;width:100%;background:none;border:0;color:var(--brand);font-weight:700;cursor:pointer
+    }
+    .acc-btn .chev{color:var(--accent);transition:transform .25s ease}
+    .acc-content{max-height:0;overflow:hidden;padding:0 14px;transition:max-height .35s ease,padding .25s ease}
+    .acc-content p{margin:12px 0 16px;color:#3b3f44}
+
+    .right .cards{display:grid;gap:14px}
+    .service-card{
+      display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:10px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border:1px solid rgba(3,102,214,0.06);
+      box-shadow:0 6px 18px rgba(9,30,66,0.04);
+      transition:transform .25s cubic-bezier(.2,.9,.2,1),box-shadow .25s ease;
+    }
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 14px 36px rgba(9,30,66,0.08)}
+    .service-card .icon{font-size:30px;color:var(--accent);background:rgba(0,119,214,0.06);padding:8px;border-radius:8px;display:inline-grid;place-items:center}
+    .service-card h3{margin:0;font-size:16px;color:var(--brand)}
+    .service-card .muted{font-size:14px;color:#556}
+
+    /* ========== MARKETING & SUPPORT CARDS ========== */
+    .cards-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      margin:20px 0 0;
+    }
+    .highlight{background:linear-gradient(180deg,#eef6ff,#fff)}
+
+    /* ========== CTA ========== */
+    .cta-section{
+      display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px;background:var(--card-bg);border-radius:var(--radius);
+      box-shadow:0 8px 20px rgba(6,24,58,0.06);margin:18px 0 36px;
+      flex-wrap:wrap;
+    }
+    .cta-text h3{color:var(--brand);font-size:20px;margin-bottom:6px}
+    .cta-actions{display:flex;gap:12px;align-items:center}
+
+    /* ========== Animations ========== */
+    .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+    .fade-up.show{opacity:1;transform:translateY(0)}
+
+    @keyframes slideInLeft{from{transform:translateX(-40px);opacity:0}to{transform:none;opacity:1}}
+    @keyframes slideInRight{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+
+    /* responsive */
+    @media (max-width:992px){
+      .combined-inner{grid-template-columns:1fr; padding:24px}
+      .hero{flex-direction:column;text-align:center}
+      .hero-right{order:-1}
+      .about{flex-direction:column;text-align:center}
+      .cta-section{flex-direction:column;text-align:center}
+    }
+    @media (max-width:520px){
+      .hero{padding:32px}
+      .about img{max-width:220px}
+    }
+
+    /* small utility */
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+  </style>
+</head>
+
+<body>
+  <div id="content"></div>
+  <div class="page">
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-left">
+        <div class="eyebrow">Our Services</div>
+        <h1>Delivering Quality Healthcare Solutions Across India</h1>
+        <p class="lead">Axpect Pharma provides PCD franchise, medicine supply, marketing support and industry-standard quality assurance to help partners grow with confidence.</p>
+        <div class="hero-actions">
+          <button class="cta-btn" id="openEnquiry2">Become a Partner</button>
+          <button class="btn-outline" onclick="document.getElementById('franchise-supply').scrollIntoView({behavior:'smooth'})">Learn About Franchise</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="img/services/header.png" alt="Axpect Pharma">
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about fade-up" id="services" data-anim>
+      <img src="img/services/about_services.png" alt="About our services">
+      <div class="content">
+        <h2>About Our Services</h2>
+        <p class="muted">Axpect Pharma combines manufacturing excellence with distributor-focused services. We support growth with high-quality products, marketing materials, reliable logistics and continuous customer assistance.</p>
+      </div>
+    </section>
+
+    <!-- FRANCHISE + SUPPLY -->
+    <section class="combined-section fade-up" id="franchise-supply" data-anim>
+      <div class="combined-inner">
+        <div class="left">
+          <h2>Franchise Provider</h2>
+          <p class="muted">We provide PCD Pharma Franchise opportunities with monopoly rights in assigned territories. Our franchise partners get access to established brands, promotional material, product samples and on-ground training.</p>
+
+          <div class="accordion" aria-label="Franchise accordion">
+            <div class="item">
+              <button class="acc-btn" aria-expanded="false">
+                <span>What's included</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="acc-content" aria-hidden="true">
+                <p>Exclusive territory rights, marketing kits, product training, and ongoing support to grow your business.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <button class="acc-btn" aria-expanded="false">
+                <span>How to apply</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="acc-content" aria-hidden="true">
+                <p>Send us an enquiry — we will guide you through documentation, MOQ, and pricing. Quick approvals for eligible candidates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <h2 class="visually-hidden">Medicine Supply & Distribution</h2>
+
+          <div class="cards">
+            <div class="service-card fade-up" data-anim>
+              <span class="material-icons-outlined icon">category</span>
+              <div>
+                <h3>Wide Product Range</h3>
+                <div class="muted">300+ certified products across multiple therapeutic categories.</div>
+              </div>
+            </div>
+
+            <div class="service-card fade-up" data-anim>
+              <span class="material-icons-outlined icon">inventory_2</span>
+              <div>
+                <h3>Flexible Packaging</h3>
+                <div class="muted">Custom labelling & package sizes to suit distributor needs.</div>
+              </div>
+            </div>
+
+            <div class="service-card fade-up" data-anim>
+              <span class="material-icons-outlined icon">local_shipping</span>
+              <div>
+                <h3>Timely Dispatch</h3>
+                <div class="muted">Fast processing and reliable PAN-India logistics partners.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETING & SUPPORT -->
+    <section class="section fade-up" id="marketing-support" data-anim>
+      <h2 style="text-align:center;color:var(--brand);margin-bottom:18px">Marketing, Promotional & Customer Support</h2>
+
+      <div class="cards-grid">
+        <div class="service-card highlight fade-up" data-anim>
+          <span class="material-icons-outlined icon">campaign</span>
+          <div>
+            <h3>Promotional Materials</h3>
+            <p class="muted">Brochures, visual aids, sample packs and stands.</p>
+          </div>
+        </div>
+
+        <div class="service-card highlight fade-up" data-anim>
+          <span class="material-icons-outlined icon">public</span>
+          <div>
+            <h3>Digital Support</h3>
+            <p class="muted">Social media creatives, product posts and ads for distributors.</p>
+          </div>
+        </div>
+
+        <div class="service-card highlight fade-up" data-anim>
+          <span class="material-icons-outlined icon">handshake</span>
+          <div>
+            <h3>Field Marketing</h3>
+            <p class="muted">Training and campaign support for local teams.</p>
+          </div>
+        </div>
+
+        <div class="service-card highlight fade-up" data-anim>
+          <span class="material-icons-outlined icon">support_agent</span>
+          <div>
+            <h3>24x7 Assistance</h3>
+            <p class="muted">Phone & WhatsApp support for urgent queries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section fade-up" id="contact-cta" data-anim>
+      <div class="cta-section">
+        <div class="cta-text">
+          <h3>Ready to partner with Axpect Pharma?</h3>
+          <p class="muted">Join our distributor network and get full marketing & logistic support.</p>
+        </div>
+
+        <div class="cta-actions">
+          <button class="cta-btn" id="openEnquiry3">Send Enquiry</button>
+          <a class="btn-outline" href="contact.html" download>Download Product List</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="Footer"></div>
+
+  <!-- ========== SCRIPTS ========== -->
+   <script>
+    fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("content").innerHTML = data;
+    });
+
+      fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Footer").innerHTML = data;
+    });
+   </script>
+  <script>
+    // Single IntersectionObserver (handles all elements with [data-anim] and staggered children)
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+
+          // If element contains children with data-anim, stagger reveal
+          const children = el.querySelectorAll('[data-anim-child]');
+          if (children.length) {
+            children.forEach((c, i) => {
+              setTimeout(() => c.classList.add('show'), i * 80);
+            });
+          }
+          el.classList.add('show');
+          obs.unobserve(el);
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('[data-anim]').forEach(el => observer.observe(el));
+    });
+
+    // Accordion behaviour (accessible)
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.acc-btn');
+      if (!btn) return;
+      const item = btn.parentElement;
+      const content = item.querySelector('.acc-content');
+
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (!expanded) {
+        // open
+        content.style.padding = '12px 14px';
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.setAttribute('aria-hidden', 'false');
+        btn.querySelector('.chev').textContent = '−';
+      } else {
+        // close
+        content.style.maxHeight = '0';
+        content.style.padding = '0 14px';
+        content.setAttribute('aria-hidden', 'true');
+        btn.querySelector('.chev').textContent = '+';
+      }
+    });
+
+    // Optional: make Enter/Space toggle accordion when focused
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const btn = document.activeElement;
+        if (btn && btn.classList && btn.classList.contains('acc-btn')) {
+          e.preventDefault();
+          btn.click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

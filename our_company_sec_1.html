@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .our_company_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-image-container {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.about-us-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  flex: 1 1 55%;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-us-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #007b8f;
+  position: relative;
+}
+
+.about-us-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007b8f;
+  margin-top: 8px;
+}
+
+ .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+@media (max-width: 768px) {
+  .our_company_container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    padding-top: 20px;
+  }
+
+  .about-us-title {
+    font-size: 24px;
+  }
+}
+  </style>
+</head>
+<body>
+    <div class="our_company_container">
+    <div class="about-image-container">
+      <img src="img/Our Company/About_us.jpg" alt="About Us" class="about-us-image">
+    </div>
+    <div class="about-content">
+      <h2 class="about-us-title">More About Axpect Pharma</h2>
+      <p>At Axpect Pharma, we are committed to delivering high-quality, affordable, and effective pharmaceutical
+        products that contribute to healthier lives across India. With a robust portfolio of 500+ certified products, we
+        cater to a wide range of therapeutic segments including antibiotics, analgesics, antacids, supplements, syrups,
+        and more.</p>
+      <p>Founded with a vision to ensure reliable healthcare for all, Axpect Pharma has quickly emerged as a trusted
+        name in the pharmaceutical industry. Our state-of-the-art manufacturing facilities adhere strictly to WHO-GMP
+        guidelines, ensuring that every product we deliver meets the highest standards of quality, safety, and efficacy.
+      </p>
+      <p>What sets us apart is not just our product range, but our passion for building meaningful partnerships. We
+        offer monopoly-based PCD pharma franchise services across India, enabling aspiring entrepreneurs and medical
+        professionals to grow with us.</p>
+      <p>At Axpect Pharma, innovation, integrity, and customer satisfaction are the cornerstones of our operations. Our
+        R&D and production teams work tirelessly to introduce new and improved formulations that address real health
+        challenges faced by communities today.</p>
+      <p>We invite you to explore partnership opportunities with Axpect Pharma — where science meets care, and business
+        meets trust.</p>
+      <br>
+      <br>
+
+      <div class="sendEnquiry desktop-btn">
+        <button class="btn" role="button">Send Enquiry</button>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>

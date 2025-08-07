@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axpect Pharma</title>
+  <style>
+
+    .container-sec-2{
+   background-color: #f8f9fb;
+   padding-top: 30px;
+}
+
+.sec-2-heading-content{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+    .smooth-infinite-slider {
+  overflow: hidden;
+  background: #f8f9fa;
+  margin: 60px 10%;
+}
+
+.slider-track {
+  display: flex;
+  animation: scrollLeft 30s linear infinite;
+  width: calc(10 * 20%); /* 10 slides, each 20% = 200% width */
+  gap: 40px;
+}
+
+.slide {
+  /*flex: 0 0 20%;*/
+
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Animation keyframes */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 33.33%;
+  }
+
+  .slider-track {
+    width: calc(10 * 33.33%);
+    animation: scrollLeft1024 30s linear infinite;
+  }
+
+  @keyframes scrollLeft1024 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+
+  .slider-track {
+    width: calc(10 * 50%);
+    animation: scrollLeft600 30s linear infinite;
+  }
+
+  @keyframes scrollLeft600 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="sec-2-heading-content container-sec-2">
+      <h1>Our Products</h1>
+      <p>
+        Since its founding Crinova is a Monopoly pharma Company in India. We
+        offer product marketing on pcd pharma franchise monopoly basis.
+      </p>
+
+      <section class="smooth-infinite-slider">
+        <div class="slider-track">
+          <!-- Repeat your 5 images twice -->
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+
+          <!-- Duplicate for seamless loop -->
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+          <div class="slide"><img src="img/product/img1.jpg" alt="" /></div>
+        </div>
+      </section>
+    </div>
+  </section>
+</body>
+</html>

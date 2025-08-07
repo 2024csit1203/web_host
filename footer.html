@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>footer</title>
+  <style>
+    /* Footer CSS */
+
+/* Footer base */
+footer {
+  background: #002b5b;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Headings */
+.footer-container h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fcd34d;
+}
+
+/* About Us text */
+.footer-container p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* Buttons */
+.footer-container .btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #fcd34d;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.footer-container .btn:hover {
+  background: #eab308;
+}
+
+/* Menu and Products list */
+.Menu-link div,
+.product-list div {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.Menu-link div a,
+.product-list div a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Menu-link div:hover a,
+.product-list div:hover a {
+  color: #fcd34d;
+}
+
+/* Contact Section */
+.footer-container .fa-map-marker-alt,
+.footer-container .fa-envelope {
+  color: #fcd34d;
+  margin-right: 10px;
+}
+
+.footer-container > div:last-child > div > div {
+  display: flex;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.footer-container > div:last-child > div > div i {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.footer-container > div:last-child > div > div div:last-child {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-container > div:last-child > div > div {
+    justify-content: center;
+  }
+}
+
+
+.footer-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px auto 15px auto;
+  width: 90%;
+  opacity: 0.3;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+  padding-bottom: 10px;
+}
+  </style>
+</head>
+<body>
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est saepe
+          numquam illum consequatur quae. Facere eum voluptas asperiores
+          dolorum quibusdam?
+        </p>
+        <button class="btn">Read More</button>
+      </div>
+      <div>
+        <h1>Menu</h1>
+        <div class="Menu-link">
+          <div><a href=""></a>Home</div>
+          <div><a href=""></a>About Us</div>
+          <div><a href=""></a>Gallery</div>
+          <div><a href=""></a>Contact Us</div>
+          <div><a href=""></a>Services</div>
+        </div>
+      </div>
+      <div>
+        <h1>Our Products</h1>
+        <div class="product-list">
+          <div>product 1</div>
+          <div>product 2</div>
+          <div>product 3</div>
+          <div>product 4</div>
+          <div>product 5</div>
+        </div>
+      </div>
+      <div>
+        <h1>Contact Us</h1>
+        <div>
+          <div>
+            <div><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum,
+              blanditiis.
+            </div>
+          </div>
+          <div>
+            <div><i class="fas fa-envelope"></i></div>
+            <div>+91-9720874236</div>
+          </div>
+          <div>
+            <div><i class="fas fa-envelope"></i></div>
+            <div>shivam.2024csit1203@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line" />
+    <div class="footer-bottom">
+      &copy; 2025 Axpect Pharma. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

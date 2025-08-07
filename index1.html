@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axpect Pharma</title>
+
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- index.html -->
+<div id="">
+    <div class="nav-container">
+    <div class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Axpect Pharma" />
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">☰</div>
+
+      <div class="nav-content" id="navbar">
+        <div class="navbar">
+          <div><a href="index.html" class="nav-link">Home</a></div>
+          <div><a href="Our_Company.html" class="nav-link">Our Company</a></div>
+          <div><a href="product.html" class="nav-link">Products</a></div>
+          <div><a href="services.html" class="nav-link">Services</a></div>
+          <div><a href="gallery.html" class="nav-link">Gallery</a></div>
+          <div><a href="contact.html" class="nav-link">Contact Us</a></div>
+          <div class="sendEnquiry mobile-btn">
+            <button class="contact-btn btn open-contact">Contact Us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sendEnquiry desktop-btn">
+        <button class="contact-btn btn open-contact">Contact Us</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <div class="form-container">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="data[Name]" required>
+
+          <label for="number">Mob No:</label>
+          <input type="number" id="number" name="data[Mob No]" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="data[Email Id]" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="data[Message]" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="form-message"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Index_header"></div>
+<div id="Index_Section_1"></div>
+<div id="Index_Our_Product"></div>
+<div>
+  <div class="container">
+    <section class="company-numbers-section">
+      <h2 class="numbers-title">Our Key Numbers</h2>
+
+      <div class="numbers-container">
+
+        <div class="number-box" data-anim>
+          <div class="circle">
+            <div class="circle-content">
+              <span class="material-icons icon">medication</span>
+              <div class="number" data-target="300">0</div>
+            </div>
+          </div>
+          <div class="label">Products</div>
+        </div>
+
+        <div class="number-box" data-anim>
+          <div class="circle">
+            <div class="circle-content">
+              <span class="material-icons icon">location_on</span>
+              <div class="number" data-target="200">0</div>
+            </div>
+          </div>
+          <div class="label">Distributors across India</div>
+        </div>
+
+        <div class="number-box" data-anim>
+          <div class="circle">
+            <div class="circle-content">
+              <span class="material-icons icon">public</span>
+              <div class="number" data-target="500">0</div>
+            </div>
+          </div>
+          <div class="label">Operational Districts</div>
+        </div>
+
+        <div class="number-box" data-anim>
+          <div class="circle">
+            <div class="circle-content">
+              <span class="material-icons icon">calendar_today</span>
+              <div class="number" data-target="20">0</div>
+            </div>
+          </div>
+          <div class="label">Years of Experience</div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+</div>
+<div id="Index_Choose_Us"></div>
+<div id="Index_FAQ">
+ <section class="faq-section">
+    <h1>FAQs</h1>
+    <div class="faq-container">
+
+      <div class="faq">
+        <div class="faq-question">WHAT IS PCD PHARMA FRANCHISE?</div>
+        <div class="faq-answer">
+          <p>• PCD Pharma Franchise is the franchising of business where a company gives permission to a pharma distributor or pharma wholesaler to sell its products by their brands...</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question">WHO CAN APPLY FOR PCD PHARMA FRANCHISE?</div>
+        <div class="faq-answer">
+          <p>• The term “PCD Pharma Franchise” defines as the authorization permitted by PCD pharma companies to franchise owners...</p>
+        </div>
+      </div>
+
+      <!-- Add more FAQs as needed -->
+
+    </div>
+  </section>
+</div>
+
+<div id="Index_Contact">
+
+  <h2>Contact to Axpect Pharma</h2>
+  
+   <div class="contact-container">
+    <!-- Google Map -->
+     
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.6673081074368!2d77.32247972399676!3d28.582032305463194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce457175bd67f%3A0xe15e16d1018e02ac!2sSector%204%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1754307219768!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-container">
+      
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="data[Name]" required />
+
+        <label for="number">Mob No:</label>
+        <input type="number" id="number" name="data[Mob No]" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="data[Email Id]" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="data[Message]" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="form-message"></div>
+    </div>
+  </div>
+</div>
+
+<div id="Footer"></div>
+
+<script src="index.js"></script>
+
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("content").innerHTML = data;
+    });
+
+
+    fetch('indexHeader.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_header").innerHTML = data;
+    });
+
+     fetch('index_sec_1.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_Section_1").innerHTML = data;
+    });
+
+     fetch('index_our_product.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_Our_Product").innerHTML = data;
+    });
+
+     fetch('index_choose_us.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_Choose_Us").innerHTML = data;
+    });
+
+    /* fetch('index_faq.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_FAQ").innerHTML = data;
+    });*/
+
+   /*  fetch('index_contact.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Index_Contact").innerHTML = data;
+    });*/
+
+     fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("Footer").innerHTML = data;
+    });
+</script>
+
+
+<!-- JS of Navbar -->
+
+<script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
+
+
+  <!-- JS of FAQ -->
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faq = button.parentElement;
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <!-- JS of Contact Section -->
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const messageDiv = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("https://sheetdb.io/api/v1/m1ldwodvsks7s", {
+        method: "POST",
+        body: formData,
+      })
+      .then((response) => {
+        if (response.ok) {
+          messageDiv.textContent = "Form submitted successfully!";
+          messageDiv.className = "success";
+          form.reset();
+        } else {
+          throw new Error("Submission failed");
+        }
+      })
+      .catch((error) => {
+        messageDiv.textContent = "Something went wrong. Please try again.";
+        messageDiv.className = "error";
+        console.error("Error submitting form:", error);
+      });
+    });
+  </script>
+
+
+
+  <!-- Number JS -->
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.number-box');
+
+  function animateCount(el, target, duration = 1400) {
+    const start = performance.now();
+    const startValue = 0;
+
+    return new Promise(resolve => {
+      function step(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - (1 - progress) * (1 - progress);
+        const current = startValue + (target - startValue) * eased;
+        el.textContent = Math.floor(current);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + "+";
+          resolve();
+        }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const box = entry.target;
+      const circle = box.querySelector('.circle');
+      const numEl = box.querySelector('.number');
+      const target = parseInt(numEl.getAttribute('data-target'), 10) || 0;
+
+      if (entry.isIntersecting) {
+        circle.classList.add('running');
+        animateCount(numEl, target, 1400).then(() => {
+          circle.classList.remove('running');
+        });
+      } else {
+        // Reset to 0 when out of view
+        numEl.textContent = "0";
+      }
+    });
+  }, { threshold: 0.4 });
+
+  boxes.forEach(b => observer.observe(b));
+});
+</script>
+
+  
+</body>
+</html>
